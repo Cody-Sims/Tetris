@@ -1,0 +1,31 @@
+Tetris README
+
+Handin: This is my final handin:
+
+Overview: My Tetris program has 5 classes
+    - Square: This class is a component of both the block and board class. It is used to create a 30x30 square at a
+    given x and y position. By utilizing loops I can use this to create multiple squares for the blocks and boards
+    - Block: This class creates a random block and adds it to the root pane. This block can be moved and rotated with
+    key input. When it reaches the bottom or collides with another block, it is added to the board
+    - Board: This class sets up the board and its borders. It is also responsible for detecting a block's collision with
+    blocks already added to the board
+    _ Tetris: This is the class where all the logic occurs. Key input and timelines are set up here. The piece is
+    constantly moved down, and when the game is over the timelines are stopped
+    - Pane Organizer: This sets up the main pane and adds a quit button
+
+Design choices: The way I set up the board and the pieces is a little weird. Instead of having a separate array that
+    keeps track of the pieces, I just changed the color of the board's squares. When a piece lands, the board's squares
+    at that location change to the color of the block. This allows me to check for collision by checking the color of
+    the board at that position.
+
+    Another thing that might be unusual is that instead of randomly selecting the shape in the tetris class, I added a
+    method within the block class that randomly selects a block. Any time the block class is called, a random block is
+    created.
+
+Known Bugs:
+    The last piece to get laid before game over will either get laid on top of a previous piece or it will
+    just not be laid.  I spent an hour and a half trying to fix it, and I kept encountering index out of bounds
+    exceptions since where the piece would be laid is off the board. I didn't think this bug was game breaking, so I
+    decided to leave it in my code as a reminder to myself that there is always something you can improve.
+
+Hours: This took me approximately 15+ hours to complete
