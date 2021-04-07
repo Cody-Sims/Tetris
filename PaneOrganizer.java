@@ -10,13 +10,16 @@ import javafx.scene.layout.Pane;
 // Creates the main pane and allows other parts of the program to access it with a getter method
 public class PaneOrganizer {
     private BorderPane _root;
+    private Pane _gamePane;
 
     // Sets the size of the root pane and instantiates the Tetris class.
     PaneOrganizer(){
         _root = new BorderPane();
         _root.setPrefSize(360, 660);
 
-        new Tetris(_root);
+        _gamePane = new Pane();
+        _root.getChildren().add(_gamePane);
+        new Tetris(_gamePane);
          setupQuitButton();
     }
 
