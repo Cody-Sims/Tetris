@@ -1,7 +1,5 @@
 Tetris README
 
-Handin: This is my final handin:
-
 Overview: My Tetris program has 5 classes
     - Square: This class is a component of both the block and board class. It is used to create a 30x30 square at a
     given x and y position. By utilizing loops I can use this to create multiple squares for the blocks and boards
@@ -27,5 +25,3 @@ Known Bugs:
     just not be laid.  I spent an hour and a half trying to fix it, and I kept encountering index out of bounds
     exceptions since where the piece would be laid is off the board. I didn't think this bug was game breaking, so I
     decided to leave it in my code as a reminder to myself that there is always something you can improve.
-
-Hours: This took me approximately 15+ hours to complete
